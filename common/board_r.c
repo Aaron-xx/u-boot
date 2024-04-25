@@ -117,37 +117,8 @@ static int atk_set_lcd(void)
 
     mdelay(200);
 
-    for(i = 0; i < 3; i++)
-    {
-        ret = dm_gpio_get_value(&priv_rgb[i]);
-        if(!ret)
-            read_id |= (0x1 << i);
-    }
-    printk("lcd_id  = %02d \n", read_id);
-    switch(read_id){
-        case 0:
-            env_set("lcd_bmp","alientek_480x272.bmp");
-            env_set("lcd_id", "0");
-            break;
-        case 1:
-            env_set("lcd_bmp","alientek_800x480.bmp");
-            env_set("lcd_id", "1");
-            break;
-        case 4:
-            env_set("lcd_bmp","alientek_800x480.bmp");
-            env_set("lcd_id", "4");
-            break;
-        case 2:
-            env_set("lcd_bmp","alientek_1024x600.bmp");
-            env_set("lcd_id", "2");
-            break;
-        case 5:
-            env_set("lcd_bmp","alientek_1280x800.bmp");
-            env_set("lcd_id", "5");
-            break;
-        default :
-            break;
-    }
+	env_set("lcd_bmp","aaron_480x272.bmp");
+	env_set("lcd_id", "0");
 
     ret=gpio_free_list_nodev(&priv_rgb[0], 3);
     if (ret) {

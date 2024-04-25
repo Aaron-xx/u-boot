@@ -466,7 +466,7 @@
 		"done\0"                                                  \
 	\
     "lcd_id=0\0"            \
-    "lcd_bmp=alientek_480x272.bmp\0"               \
+    "lcd_bmp=aaron_480x272.bmp\0"               \
     "select_lcd_id="                                \
         "ext4load mmc ${devnum}:${distro_bootpart} c4300000 ${lcd_bmp};"                 \
         "bmp display c4300000;\0"                  \

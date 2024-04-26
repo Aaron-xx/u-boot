@@ -57,6 +57,8 @@ fit-dtb.blob*
 /spl/
 /tpl/
 /defconfig
+build/
+deploy/
 
 #
 # Generated include files
